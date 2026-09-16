@@ -57,7 +57,17 @@ Network Security Groups were used to control inbound traffic.
 | --------- | -------: | -------- | --------- | ---: | ------ |
 | AllowSSH  |      100 | TCP      | Inbound   |   22 | Allow  |
 | AllowHTTP |      110 | TCP      | Inbound   |   80 | Allow  |
+### VM Network Configuration
 
+![Azure VM Network Configuration](screenshots/01-vm-networking.png)
+
+### Subnet Configuration
+
+![Azure Subnet Configuration](screenshots/02-subnets.png)
+
+### Network Security Group Rules
+
+![Azure NSG Rules](screenshots/03-nsg-rules.png)
 SSH access was permitted on port 22 for administration, while HTTP traffic was permitted on port 80 for the Nginx web server.
 
 ## Testing and Validation
@@ -79,7 +89,13 @@ Connected to 10.0.2.4 port 80
 HTTP/1.1 200 OK
 Server: nginx/1.18.0 (Ubuntu)
 ```
+### Nginx Listening on Port 80
 
+![Nginx Listening on Port 80](screenshots/04-nginx-listening.png)
+
+### Private Connectivity Test
+
+![Private VM Connectivity Test](screenshots/05-private-connectivity.png)
 This confirmed that:
 
 * LGvm could reach BackendVM using its **private IP address**.
