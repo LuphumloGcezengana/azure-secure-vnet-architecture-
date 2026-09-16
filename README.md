@@ -107,3 +107,61 @@ This confirmed that the Nginx web server was running and accepting HTTP connecti
 ### Result
 
 The private connectivity test successfully demonstrated communication between the two Azure VMs without requiring a public IP address on the backend VM.
+
+## Skills Demonstrated
+
+Through this project, I gained practical experience with:
+
+* **Azure Virtual Networks (VNets)**
+* **Subnet design and segmentation**
+* **Network Security Groups (NSGs)**
+* **Inbound traffic rules**
+* **Private IP addressing**
+* **Azure Linux Virtual Machines**
+* **Ubuntu Linux administration**
+* **Nginx web server configuration**
+* **SSH**
+* **HTTP and TCP networking**
+* **Azure CLI**
+* **Bash**
+* **Network troubleshooting**
+
+## Key Lessons Learned
+
+### 1. Subnet Segmentation
+
+I learned how a VNet can be divided into multiple subnets to separate workloads and organize network resources.
+
+### 2. Private Communication
+
+I learned that Azure VMs within the same VNet can communicate using their private IP addresses without requiring public IP connectivity between the workloads.
+
+### 3. Network Security Groups
+
+I learned how NSGs control network traffic using rules based on factors such as:
+
+* Source
+* Destination
+* Protocol
+* Port
+* Direction
+* Priority
+* Access
+
+### 4. Troubleshooting
+
+When connectivity did not initially work as expected, I used Azure CLI and Linux networking commands to investigate the configuration.
+
+This helped me understand that successful application connectivity depends on multiple layers, including the VM, service, listening port, subnet configuration, and network security rules.
+
+## AZ-104 Concepts Practiced
+
+This project gave me practical experience with several concepts relevant to the **Microsoft Azure Administrator (AZ-104)** certification:
+
+* Configure virtual networking
+* Configure and manage subnets
+* Configure network security
+* Manage Azure virtual machines
+* Manage Linux resources
+* Troubleshoot network connectivity
+* Use Azure CLI and Bash
