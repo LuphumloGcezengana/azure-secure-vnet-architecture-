@@ -59,3 +59,51 @@ Network Security Groups were used to control inbound traffic.
 | AllowHTTP |      110 | TCP      | Inbound   |   80 | Allow  |
 
 SSH access was permitted on port 22 for administration, while HTTP traffic was permitted on port 80 for the Nginx web server.
+
+## Testing and Validation
+
+After configuring the virtual machines, subnets, and Network Security Groups, I tested communication between the frontend and backend VMs using the backend VM's private IP address.
+
+### Private HTTP Connectivity Test
+
+From **LGvm**, I used `curl` to send an HTTP request to the backend VM:
+
+```bash
+curl -v http://10.0.2.4
+```
+
+The connection was successful:
+
+```text
+Connected to 10.0.2.4 port 80
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+```
+
+This confirmed that:
+
+* LGvm could reach BackendVM using its **private IP address**.
+* Network traffic between the two subnets was functioning.
+* Nginx was accessible on **TCP port 80**.
+* The backend VM successfully returned an HTTP response.
+
+### Nginx Verification
+
+On BackendVM, I verified that Nginx was actively listening on port 80:
+
+```bash
+sudo ss -tlnp
+```
+
+The output showed Nginx listening on:
+
+```text
+0.0.0.0:80
+[::]:80
+```
+
+This confirmed that the Nginx web server was running and accepting HTTP connections.
+
+### Result
+
+The private connectivity test successfully demonstrated communication between the two Azure VMs without requiring a public IP address on the backend VM.
