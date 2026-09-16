@@ -14,10 +14,17 @@ The backend VM hosts an Nginx web server, which was successfully accessed from L
 
 Project Objectives
 1)Create an Azure Virtual Network with multiple subnets
+
 2)Deploy Linux virtual machines into separate subnets
+
 3)Configure Network Security Groups (NSGs)
+
 4)Control inbound network traffic using NSG rules
+
 5)Install and configure Nginx on the backend VM
+
 6)Test private VM-to-VM communication
+
 7)Verify HTTP connectivity using curl
+
 8)Use Azure CLI and Linux Bash commands to manage and troubleshoot the environment
